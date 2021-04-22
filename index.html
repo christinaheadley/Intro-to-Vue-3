@@ -18,15 +18,21 @@
         <div class="product-container">
           <div class="product-image">
             <img :class="{ 'out-of-stock-img' : !inStock }" v-bind:src="image" />
+            <img v-bind:src="image" />
+            <a :href="url">Google</a>
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p>{{ description }}</p>
             <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
+      
+            <p v-show="onSale">On Sale!!</p>
             <ul>
               <li v-for="detail in details">{{ detail }}</li>
             </ul>
 
+            Colors:
             <div
               v-for="variant in variants"
               :key="variant.id"
@@ -44,6 +50,13 @@
             <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" @click="addToCart">
               Add to Cart
             </button>
+            <button class="button" v-on:click="removeFromCart">Remove from Cart</button>
+            <ul>
+              Sizes:
+              <li v-for="(size, index) in sizes" :key="index">{{ size}}</li>
+            </ul>
+            
+          </div>  
           </div>
         </div>
       </div>
