@@ -89,7 +89,15 @@ li {
 }
 
 .out-of-stock-img {
+<<<<<<< HEAD
   opacity: 0.5;
+=======
+<<<<<<< HEAD
+  opacity: 0.5;
+=======
+  opacity:0.5
+>>>>>>> 43b30efc5e83d607f560a479ba729eed31537dee
+>>>>>>> 1895e139869706f63b672044b7efeb753631591e
 }
 
 p {
