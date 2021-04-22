@@ -2,6 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       product: "Socks",
+      description: "crew socks",
       image: "./assets/images/socks_blue.jpg",
       inStock: true,
       details: ["50% cotton", "30% wool", "20% polyester"],
@@ -10,6 +11,9 @@ const app = Vue.createApp({
         { id: 2235, color: "blue" },
       ],
       sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL", "XXXXL"],
+      inventory: 0,
+      onSale: false,
+      url: "www.google.com",
     };
   },
 });
