@@ -61,11 +61,15 @@ app.component("product-display", {
   },
   methods: {
     addToCart() {
+<<<<<<< HEAD
       this.$emit("add-to-cart", this.variants[this.selectedVariant].id);
       // [payload]
     },
     removeFromCart() {
       this.$emit("remove-from-cart", this.variants[this.selectedVariant].id);
+=======
+      this.cart += 1;
+>>>>>>> 15a31f6258feca5eb580e03f314e08dfdebacb79
     },
     updateVariant(index) {
       this.selectedVariant = index;
@@ -79,11 +83,19 @@ app.component("product-display", {
       return this.variants[this.selectedVariant].image;
     },
     inStock() {
+<<<<<<< HEAD
       return this.variants[this.selectedVariant].quantity;
     },
     shipping() {
       if (this.premium) {
         return "Free";
+=======
+      return this.variants[this.selectedVariant].image;
+    },
+    shipping() {
+      if (this.premium) {
+        return "free";
+>>>>>>> 15a31f6258feca5eb580e03f314e08dfdebacb79
       }
       return 2.99;
     },
